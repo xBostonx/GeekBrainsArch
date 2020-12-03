@@ -1,10 +1,10 @@
 import entities.CompositeOrder;
 import entities.Order;
+import utils.DeliveryService;
 import utils.OrderService;
 import utils.OrderUtilWrapper;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -27,6 +27,11 @@ public class Main {
         ordersAll.add(order5);
 
         OrderService.printAllOrders(ordersAll);
+
+
+        /////////////////////////
+
+        DeliveryService.executeDelivery("Москва, ул. Арбатская, д. 42");
 
     }
 }
