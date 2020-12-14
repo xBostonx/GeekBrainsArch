@@ -8,7 +8,7 @@ import java.util.List;
 public class Client extends Entity{
     private Long id;
 
-    private String name;
+    private String clientName;
 
     private List<Order> orders;
 
