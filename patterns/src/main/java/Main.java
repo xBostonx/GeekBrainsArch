@@ -1,8 +1,6 @@
 import entities.CompositeOrder;
 import entities.Order;
-import utils.DeliveryService;
-import utils.OrderService;
-import utils.OrderUtilWrapper;
+import utils.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,5 +31,8 @@ public class Main {
 
         DeliveryService.executeDelivery("Москва, ул. Арбатская, д. 42");
 
+        ItemView itemView = new ItemView();
+        ItemController itemController = new ItemController(itemView);
+        itemController.updateView(1L);
     }
 }

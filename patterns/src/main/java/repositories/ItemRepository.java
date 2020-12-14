@@ -1,21 +1,25 @@
 package repositories;
 
-import entities.Entity;
 import entities.Item;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ItemRepository implements Repository {
     private static ItemRepository itemRepository = new ItemRepository();
-    private List<Item> items;
+    private static List<Item> items;
 
-    private ItemRepository() {}
+    private ItemRepository() {
+        items = new ArrayList<>();
+        items.add(new Item(1L, "Cheese", "Fresh", new BigDecimal(4)));
+    }
 
     public static ItemRepository getInstance() {
         return itemRepository;
     }
 
-    public Entity getById(Long id) {
+    public Item getById(Long id) {
         for (Item item : items) {
             if (item.getId().equals(id)) return item;
         }

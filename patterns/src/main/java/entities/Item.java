@@ -13,4 +13,11 @@ public class Item extends Entity {
     private String description;
 
     private BigDecimal price;
+
+    public Item(Long id, String title, String description, BigDecimal price) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+    }
 }
